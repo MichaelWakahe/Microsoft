@@ -14,6 +14,8 @@ Connect-MgGraph -Scopes "Application.ReadWrite.All","Directory.ReadWrite.All"
 
 # Login to your Azure subscription.
 Connect-AzAccount
+# For regional environments that require specific compliance (e.g., Azure China 21Vianet), use the Environment parameter:
+# Connect-AzAccount -Environment AzureChinaCloud
 
 # Create the service principal for Microsoft Entra Domain Services.
 New-MgServicePrincipal -AppId "2565bd9d-da50-47d4-8b85-4c97f669dc36"
